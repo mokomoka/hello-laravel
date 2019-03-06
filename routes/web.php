@@ -18,3 +18,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/messages/index', 'MessageController@index')->name('message.index');
+Route::get('/message/{id}', 'MessageController@show')->name('message.show');
+Route::get('/messages', 'MessageController@top')->name('message.top');
+Route::get('/messages/new', 'MessageController@create')->name('message.create');
+Route::post('/messages/new', 'MessageController@store')->name('message.store');
+
+Route::get('/message/list', 'MessageController@list');
