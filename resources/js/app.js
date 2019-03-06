@@ -28,6 +28,34 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-const app = new Vue({
-    el: '#app'
-});
+// const app = new Vue({
+//     el: '#app'
+// });
+
+window.onload = function () {
+    var rndm = new Vue({
+        el: '#randomM',
+        data: {
+            messages: [],
+            message: ''
+        },
+        methods: {
+            fetchMessages: function() {
+                axios.get('/api/get').then((res)=>{
+                    this.messages = res.data;
+                    console.log(this.messages);
+                    return this.message;
+                })
+            },
+            messageRandom: function() {
+                rnd = Math.floor(Math.random() * this.messages.length);
+                this.$set(this, 'message', this.messages[rnd]);
+                console.log(this.message);
+                return this.message;
+            }
+        },
+        mounted () {
+            this.fetchMessages()
+        }
+    });
+}
