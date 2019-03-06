@@ -31,3 +31,29 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 const app = new Vue({
     el: '#app'
 });
+
+// window.onload = function () {
+//     var rndm = new Vue({
+//         el: '#rndm',
+//         data: {
+//             messages: [],
+//             message: ''
+//         },
+//         methods: {
+//         fetchMessages:  function() {
+//                 axios.get('/api/get').then((res)=>{
+//                     this.messages = res.data
+//                     return message;
+//                 })
+//             },
+//             messageRandom: function() {
+//                 rnd = Math.floor(Math.random() * this.messages.length);
+//                 this.message = this.messages[rnd];
+//                 return message;
+//             }
+//         },
+//         created() {
+//             this.fetchMessages()
+//         }
+//     });
+// }

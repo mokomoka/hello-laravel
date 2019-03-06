@@ -7,16 +7,20 @@ var rndm = new Vue({
         messages: [],
         message: ''
     },
-    created() {
-        var self = this;
-        var url = '/message/list';
-        axois.get(url).then(function(response){
-            self.messages = response.data;
-        });
-    },
     methods: {
+       fetchMessages:  function() {
+            axios.get('/api/get').then((res)=>{
+                this.messages = res.data
+                return message;
+            })
+        },
         messageRandom: function() {
-            this.message = this.messages[Math.random()*4]['content'];
+            rnd = Math.floor(Math.random() * this.messages.length);
+            this.message = this.messages[rnd];
+            return message;
         }
+    },
+    created() {
+        this.fetchMessages()
     }
 });
