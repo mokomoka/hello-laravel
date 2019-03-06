@@ -21,7 +21,7 @@ Message List
                             <button type="button" class="btn btn-primary" onclick="location.href='/message/edit/{{ $message->id }}'">編集</button>
                         </div>
                         <div class="col-lg-6">
-                            <button type="button" class="btn btn-danger" onclick="location.href='/message/delete/{{ $message->id }}'">削除</button>
+                            <button type="button" class="btn btn-danger" onclick="location.href='/message/show/{{ $message->id }}'">削除</button>
                         </div>
                     </div>
                 </div>
