@@ -18,5 +18,7 @@ Route::get('/messages/new', 'MessageController@create')->name('message.create');
 Route::post('/messages/new', 'MessageController@store')->name('message.store');
 Route::get('/message/edit/{id}', 'MessageController@edit')->name('message.edit');
 Route::post('/message/edit', 'MessageController@update')->name('message.update');
+Route::get('/message/show/{id}', 'MessageController@show')->name('message.show');
+Route::post('/message/delete', 'MessageController@destroy')->name('message.delete');
 
 Route::get('/message/list', 'MessageController@list');

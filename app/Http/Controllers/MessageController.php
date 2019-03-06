@@ -48,9 +48,10 @@ class MessageController extends Controller
      * @param  \App\Message  $message
      * @return \Illuminate\Http\Response
      */
-    public function show(Message $message)
+    public function show(Request $request, $id)
     {
-        //
+        $message = Message::find($id);
+        return view('show', ['message' => $message]);
     }
 
     /**
@@ -86,9 +87,10 @@ class MessageController extends Controller
      * @param  \App\Message  $message
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Message $message)
+    public function destroy(Request $request)
     {
-        //
+        Message::destroy($request->id);
+        return view('delete');
     }
 
     public function top()
