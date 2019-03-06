@@ -18,10 +18,10 @@ Message List
                     </div>
                     <div class="col-sm-4 row justify-content-center">
                         <div class="col-lg-6">
-                            <button type="button" class="btn btn-primary" onclick="location.href='/message/edit/{{ $message->id }}'">編集</button>
+                            <button type="button" class="btn btn-primary" onclick="location.href='./edit/{{ $message->id }}'">編集</button>
                         </div>
                         <div class="col-lg-6">
-                            <button type="button" class="btn btn-danger" onclick="location.href='/message/show/{{ $message->id }}'">削除</button>
+                            <button type="button" class="btn btn-danger" onclick="location.href='./show/{{ $message->id }}'">削除</button>
                         </div>
                     </div>
                 </div>
