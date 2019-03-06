@@ -22,7 +22,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/messages/index', 'MessageController@index')->name('message.index');
 Route::get('/message/{id}', 'MessageController@show')->name('message.show');
 Route::get('/messages', 'MessageController@top')->name('message.top');
-Route::get('/messages/new', 'MessageController@create')->name('message.create');
-Route::post('/messages/new', 'MessageController@store')->name('message.store');
+Route::get('/message/new', 'MessageController@create')->name('message.create');
+Route::post('/message/new', 'MessageController@store')->name('message.store');
+Route::get('/message/edit/{id}', 'MessageController@edit')->name('message.edit');
+Route::post('/message/edit', 'MessageController@update')->name('message.update');
 
 Route::get('/message/list', 'MessageController@list');
