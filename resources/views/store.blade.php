@@ -11,8 +11,8 @@ Success
                 <div class="card-header">Success!</div>
                 <div class="card-body">
                     <p>メッセージが追加されました！</p>
-                    <button type="button" class="btn btn-primary" onclick="location.href='/messages'">トップに戻る</button>
-                    <button type="button" class="btn btn-default" onclick="location.href='/messages/new'">もう一つ追加する</button>
+                    <button type="button" class="btn btn-primary" onclick="location.href='./'">トップへ</button>
+                    <button type="button" class="btn btn-default" onclick="location.href='./new'">もう一つ追加する</button>
                 </div>
             </div>
         </div>

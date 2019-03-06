@@ -11,14 +11,11 @@
 |
 */
 
-Route::get('/messages/index', 'MessageController@index')->name('message.index');
-Route::get('/message/{id}', 'MessageController@show')->name('message.show');
-Route::get('/messages', 'MessageController@top')->name('message.top');
-Route::get('/messages/new', 'MessageController@create')->name('message.create');
-Route::post('/messages/new', 'MessageController@store')->name('message.store');
-Route::get('/message/edit/{id}', 'MessageController@edit')->name('message.edit');
-Route::post('/message/edit', 'MessageController@update')->name('message.update');
-Route::get('/message/show/{id}', 'MessageController@show')->name('message.show');
-Route::post('/message/delete', 'MessageController@destroy')->name('message.delete');
-
-Route::get('/message/list', 'MessageController@list');
+Route::get('/index', 'MessageController@index')->name('message.index');
+Route::get('/', 'MessageController@top')->name('message.top');
+Route::get('/new', 'MessageController@create')->name('message.create');
+Route::post('/new', 'MessageController@store')->name('message.store');
+Route::get('/edit/{id}', 'MessageController@edit')->name('message.edit');
+Route::post('/edit', 'MessageController@update')->name('message.update');
+Route::get('/show/{id}', 'MessageController@show')->name('message.show');
+Route::post('/delete', 'MessageController@destroy')->name('message.delete');

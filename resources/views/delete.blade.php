@@ -11,8 +11,8 @@ Success
                 <div class="card-header">Success!</div>
                 <div class="card-body">
                     <p>メッセージが削除されました！</p>
-                    <button type="button" class="btn btn-primary" onclick="location.href='/messages'">トップへ</button>
-                    <button type="button" class="btn btn-default" onclick="location.href='/messages/index'">リストへ</button>
+                    <button type="button" class="btn btn-primary" onclick="location.href='./'">トップへ</button>
+                    <button type="button" class="btn btn-default" onclick="location.href='./index'">リストへ</button>
                 </div>
             </div>
         </div>
