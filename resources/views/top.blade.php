@@ -9,12 +9,14 @@ Random Button
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">Button</div>
-                <div id="rndm" class="card-body">
-                    <!-- <button type="button" class="btn btn-primary" v-on:click="messageRandom" v-bind:value="message"> -->
-                    <button type="button" class="btn btn-primary">
+                <div id="randomM" class="card-body">
+                    <button type="button" class="btn btn-primary" @click="messageRandom">
                         Push me!
                     </button>
-                    <!-- <p>@{{ message.content }}</p> -->
+                    <hr>
+                    <p class="card-text">@{{ message['id'] }}</p>
+                    <h4 class="card-title">@{{ message['content'] }}</h4>
+                    <h6 class="card-subtitle text-muted">@{{ message['updated_at'] }}</h6>
                 </div>
             </div>
         </div>

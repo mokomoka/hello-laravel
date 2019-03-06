@@ -48996,34 +48996,39 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+// const app = new Vue({
+//     el: '#app'
+// });
 
-var app = new Vue({
-  el: '#app'
-}); // window.onload = function () {
-//     var rndm = new Vue({
-//         el: '#rndm',
-//         data: {
-//             messages: [],
-//             message: ''
-//         },
-//         methods: {
-//         fetchMessages:  function() {
-//                 axios.get('/api/get').then((res)=>{
-//                     this.messages = res.data
-//                     return message;
-//                 })
-//             },
-//             messageRandom: function() {
-//                 rnd = Math.floor(Math.random() * this.messages.length);
-//                 this.message = this.messages[rnd];
-//                 return message;
-//             }
-//         },
-//         created() {
-//             this.fetchMessages()
-//         }
-//     });
-// }
+window.onload = function () {
+  var rndm = new Vue({
+    el: '#randomM',
+    data: {
+      messages: [],
+      message: ''
+    },
+    methods: {
+      fetchMessages: function fetchMessages() {
+        var _this = this;
+
+        axios.get('/api/get').then(function (res) {
+          _this.messages = res.data;
+          console.log(_this.messages);
+          return _this.message;
+        });
+      },
+      messageRandom: function messageRandom() {
+        rnd = Math.floor(Math.random() * this.messages.length);
+        this.$set(this, 'message', this.messages[rnd]);
+        console.log(this.message);
+        return this.message;
+      }
+    },
+    mounted: function mounted() {
+      this.fetchMessages();
+    }
+  });
+};
 
 /***/ }),
 
