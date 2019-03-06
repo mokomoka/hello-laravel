@@ -59,9 +59,10 @@ class MessageController extends Controller
      * @param  \App\Message  $message
      * @return \Illuminate\Http\Response
      */
-    public function edit(Message $message)
+    public function edit(Request $request, $id)
     {
-        //
+        $message = Message::find($id);
+        return view('edit', ['message' => $message]);
     }
 
     /**
@@ -71,9 +72,12 @@ class MessageController extends Controller
      * @param  \App\Message  $message
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Message $message)
+    public function update(Request $request)
     {
-        //
+        $message = Message::find($request->id);
+        $message->content = $request->content;
+        $message->save();
+        return view('update');
     }
 
     /**
