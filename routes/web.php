@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/index', 'MessageController@index')->name('message.index');
-Route::get('/', 'MessageController@top')->name('message.top');
+Route::get('/list', 'MessageController@list')->name('message.list');
+Route::get('/', 'MessageController@index')->name('message.index');
 Route::get('/new', 'MessageController@create')->name('message.create');
 Route::post('/new', 'MessageController@store')->name('message.store');
 Route::get('/edit/{id}', 'MessageController@edit')->name('message.edit');

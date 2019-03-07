@@ -12,7 +12,7 @@ Success
                 <div class="card-body">
                     <p>メッセージが更新されました！</p>
                     <button type="button" class="btn btn-primary" onclick="location.href='./'">トップへ</button>
-                    <button type="button" class="btn btn-default" onclick="location.href='./index'">リストへ</button>
+                    <button type="button" class="btn btn-default" onclick="location.href='./list'">リストへ</button>
                 </div>
             </div>
         </div>

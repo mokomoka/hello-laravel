@@ -14,8 +14,7 @@ class MessageController extends Controller
      */
     public function index()
     {
-        $messages = Message::all();
-        return view('index',['messages' => $messages]);
+        return view('index');
     }
 
     /**
@@ -93,14 +92,15 @@ class MessageController extends Controller
         return view('delete');
     }
 
-    public function top()
+    public function api()
     {
-        return view('top');
+        $messages = Message::all();
+        return $messages;
     }
 
     public function list()
     {
         $messages = Message::all();
-        return $messages;
+        return view('list',['messages' => $messages]);
     }
 }

@@ -22,7 +22,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
-                <a class="navbar-brand" href="{{ route('message.top') }}">
+                <a class="navbar-brand" href="{{ route('message.index') }}">
                     Random Messages
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -38,7 +38,7 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('message.index') }}">List</a>
+                            <a class="nav-link" href="{{ route('message.list') }}">List</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('message.create') }}">New</a>
